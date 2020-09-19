@@ -42,6 +42,7 @@ public class WorldGenerator : MonoBehaviour
                 for (int h = 0; h < k; ++h)
                 {
                     var dirtBlock = Instantiate(MiddleBlock, new Vector3(i, h, j), Quaternion.identity);
+                    dirtBlock.transform.SetParent(env.transform);
                 }
             }
         }
